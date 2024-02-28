@@ -2,23 +2,20 @@ import java.util.*;
 
 // Making the author class
 public class Author {
-    private String firstName;
-    private String lastName;
+    private String name;
     private String birth;
     private List<Book> booksWritten;
 
-    public Author(String firstName, String lastName, String birth)
+    public Author(String name, String birth)
     {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name = name;
         this.birth = birth;
         this.booksWritten = new ArrayList<>();
     }
 
     public Author(Author a)
     {
-        this.firstName = a.firstName;
-        this.lastName = a.lastName;
+        this.name = a.name;
         this.birth = a.birth;
         this.booksWritten = a.booksWritten;
 
@@ -34,16 +31,15 @@ public class Author {
         booksWritten.remove(book);
     }
 
-    public void set(String firstName, String lastName, String birth)
+    public void set(String name, String birth)
     {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name = name;
         this.birth = birth;
     }
 
     public String getName()
     {
-        return(this.firstName + " " + this.lastName);
+        return name;
     }
 
     public String getBirth()
